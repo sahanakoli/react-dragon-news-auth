@@ -1,15 +1,22 @@
 
+
 import Navbar from "../../Sheard/Navbar/Navbar";
 import { Link } from "react-router-dom";
 
 
+
 const Login = () => {
+
+    
+
     const handleLogin = e =>{
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
         console.log(email, password);
+
+        
     }
     return (
         <div>
