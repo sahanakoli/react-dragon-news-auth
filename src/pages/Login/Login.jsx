@@ -1,13 +1,13 @@
 
-
+import { useContext } from "react";
 import Navbar from "../../Sheard/Navbar/Navbar";
 import { Link } from "react-router-dom";
-
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Login = () => {
 
-    
+    const {signIn} = useContext(AuthContext);
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -16,7 +16,13 @@ const Login = () => {
         const password = form.get('password');
         console.log(email, password);
 
-        
+        signIn(email,password)
+        .then(result =>{
+            console.log(result.user)
+        })
+        .catch(error =>{
+            console.error(error);
+        })
     }
     return (
         <div>
