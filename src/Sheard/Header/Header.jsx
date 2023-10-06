@@ -6,8 +6,8 @@ const Header = () => {
     return (
         <div>
             <img className='mx-auto' src={logo} alt="" />
-          <p>Journalism without Fear or Favour</p>
-          <p className=' text-xl'>{moment().format("dddd, MMMM D, YYYY")}</p>  
+          <p className='mt-4'>Journalism without Fear or Favour</p>
+          <p className='mt-2 text-xl'>{moment().format("dddd, MMMM D, YYYY")}</p>  
         </div>
     );
 };

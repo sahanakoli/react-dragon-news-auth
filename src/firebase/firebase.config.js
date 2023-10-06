@@ -4,13 +4,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyD02QTuXf3oOMXTGv2JPe2uI7sA7W1pnpI",
-  authDomain: "react-dragon-news-auth-1efea.firebaseapp.com",
-  projectId: "react-dragon-news-auth-1efea",
-  storageBucket: "react-dragon-news-auth-1efea.appspot.com",
-  messagingSenderId: "349284534351",
-  appId: "1:349284534351:web:a1dcc6a5165481f56cc23a"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_VITE_APPID,
 };
 
 // Initialize Firebase
